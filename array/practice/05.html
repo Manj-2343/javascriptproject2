@@ -1,0 +1,26 @@
+<!-- to get the disappeared element / -->
+ <!-- 1st way -->
+<script>
+    let arr = [4, 3, 2, 7, 8, 2, 3, 1];
+
+let disappearedElement = arr.reduce((acc, curr) => {
+  acc[curr] = (acc[curr] || 0) + 1;
+  return acc;
+}, {}).find((val, key) => val === 1);
+
+console.log(disappearedElement);
+</script>
+<!-- 2nd way -->
+ <script>
+    let arr1 = [4, 3, 2, 7, 8, 2, 3, 1];
+
+let disappearedElement1;
+for (let i = 1; i <= Math.max(...arr); i++) {
+  if (!arr.includes(i)) {
+    disappearedElement1 = i;
+    break;
+  }
+}
+
+console.log(disappearedElement1);
+ </script>

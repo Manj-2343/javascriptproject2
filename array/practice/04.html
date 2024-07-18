@@ -1,0 +1,9 @@
+<script>
+  let arr = [-2, 4, 5, -3, 10, 20, -10];
+
+  let closestToZero = arr.reduce((acc, current) => {
+    return Math.abs(current) < Math.abs(acc) ? current : acc;
+  }, arr[0]);
+
+  console.log(closestToZero);
+</script>
