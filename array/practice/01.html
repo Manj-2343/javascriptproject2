@@ -1,0 +1,35 @@
+<!-- // How to get the 2nd largest number // Using Math.max() and filter() -->
+<!-- 1st way -->
+<script>
+  let arrr = [1, 2, 3, 4, 5, 6, 8];
+  let Max = Math.max(...arrr);
+  let secondMax = Math.max(...arrr.filter((x) => x !== Max));
+  console.log(secondMax);
+</script>
+<!-- 2nd way -->
+<script>
+  let arr = [3, 1, 4, 2, 5, 6];
+  arr.sort((a, b) => b - a); //decending order
+  const secondLargest = arr[1];
+  console.log(arr);
+  console.log(secondLargest);
+</script>
+<!-- 3rd way -->
+<script>
+  const arr1 = [3, 1, 4, 2, 5, 6];
+
+  const result = arr1.reduce(
+    (acc, current) => {
+      if (current > acc.max) {
+        acc.secondMax = acc.max;
+        acc.max = current;
+      } else if (current > acc.secondMax && current !== acc.max) {
+        acc.secondMax = current;
+      }
+      return acc;
+    },
+    { max: -Infinity, secondMax: -Infinity }
+  );
+  console.log(arr1);
+  console.log(result.secondMax);
+</script>

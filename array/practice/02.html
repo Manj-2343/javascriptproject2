@@ -1,0 +1,26 @@
+<!-- add a felid in every object -->
+<script>
+  let employees = [
+    { eId: 101, name: "deepak", sal: 5000 },
+    { eId: 103, name: "ajay", sal: 6000 },
+    { eId: 102, name: "ranjan", sal: 8000 },
+    { eId: 104, name: "manoj", sal: 7000 },
+  ];
+  employees = employees.map((employ) => {
+    return { ...employ, department: "IT" };
+  });
+  console.log(employees);
+</script>
+<script>
+  let employees1 = [
+    { eId: 101, name: "deepak", sal: 5000 },
+    { eId: 103, name: "ajay", sal: 6000 },
+    { eId: 102, name: "ranjan", sal: 8000 },
+    { eId: 104, name: "manoj", sal: 7000 },
+  ];
+  employees1.map(f1);
+  function f1(obj) {
+    obj.department = "It";
+  }
+  console.log(employees1);
+</script>
