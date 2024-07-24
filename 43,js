@@ -1,0 +1,31 @@
+//reduce method
+const numbers = [1, 2, 3, 4, 5, 10];
+// sum of all the numbers
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+  // }, initialValue); ->you can write the value
+});
+console.log(sum);
+// track the accumulator and currentValue and return
+//  i.            1                  2              3
+// ii.            3                  3              6
+//iii.            6                  4              10
+// iv.            10                 5              15
+// v.             15                10              25=>ans
+
+const userCart = [
+  { productId: 1, productName: "mobile", price: 12200 },
+  { productId: 2, productName: "Laptop", price: 22000 },
+  { productId: 3, productName: "Tv", price: 24000 },
+  { productId: 4, productName: "Antina", price: 100 },
+];
+const cart = userCart.reduce((totalPrice, currentProduct) => {
+  return totalPrice + currentProduct.price;
+}, 0);
+console.log(cart);
+//track
+//total price  currentValue                       return
+// 0          {}-> currentProduct.price=12200     12200
+//12200       {}-> currentProduct.price=22000     34200
+//34200       {}-> currentProduct.price=24000     58200
+//58200       {}-> currentProduct.price=100       58300=>ans
