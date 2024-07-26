@@ -1,0 +1,9 @@
+//Hoisting
+
+console.log(myFunction);
+
+var myFunction = function () {
+  console.log("this is my function");
+};
+console.log(myFunction);
+// here the this myFunction is treated as the variable

@@ -10,3 +10,4 @@ var lastName = "Biswal";
 var fullName = `${firstName} ${lastName}`;
 console.log(fullName);
 //this function is created using function keyword so it will be present in the global scope
+//hoisting
