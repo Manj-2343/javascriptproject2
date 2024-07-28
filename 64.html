@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="heading1">Hello world</h1>
+    <h1 class="heading2">Hello world</h1>
+    <h1 class="heading3">Hello world</h1>
+    <h1 class="heading4">Hello world</h1>
+    <h1 class="heading5">Hello world</h1>
+  </body>
+  <script>
+    const heading1 = document.querySelector(".heading1");
+    const heading2 = document.querySelector(".heading2");
+    const heading3 = document.querySelector(".heading3");
+    const heading4 = document.querySelector(".heading4");
+    const heading5 = document.querySelector(".heading5");
+    function changeText(element, text, color, time) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (element) {
+            element.textContent = text;
+            element.style.color = color;
+            resolve();
+          } else {
+            reject("element not found");
+          }
+        }, time);
+      });
+    }
+    const returnPromise = changeText(heading1, "one", "red", 2000);
+    returnPromise
+      .then(() => {
+        return changeText(heading2, "two", "blue", 2000);
+      })
+      .then(() => {
+        return changeText(heading3, "three", "green", 2000);
+      })
+      .then(() => {
+        return changeText(heading4, "four", "cyan", 2000);
+      })
+      .then(() => {
+        changeText(heading5, "five", "pink", 2000);
+      })
+      .catch((error)=>alert("error"));
+  </script>
+</html>

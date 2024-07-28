@@ -13,4 +13,5 @@ console.log(person["age"]); // bracket notation
 //HOw to add key value pair in the object
 person.gender = "Male";
 person["lastName"] = "biswal";
+person["address"] = "Jadupur";
 console.log(person);
