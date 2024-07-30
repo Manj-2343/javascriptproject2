@@ -37,7 +37,7 @@
         justify-content: space-between;
         align-items: center;
       }
-      .navItem {
+      .navItems {
         width: 40%;
         display: flex;
         list-style-type: none;
@@ -110,20 +110,27 @@
         width: 100%;
       }
     </style>
-    <script src="./93.js" defer></script>
+    <!-- <script src="./94.js" defer></script> -->
+    <!-- <script src="./95.js" defer></script> -->
+    <!-- <script src="./96.js" defer></script> -->
+    <!-- <script src="./97.js" defer></script> -->
+    <!-- <script src="./98.js" defer></script>  -->
+    <script src="./99.js" defer></script>
   </head>
   <body>
     <header class="header">
       <nav class="nav container">
         <h1 class="logo">Website</h1>
-        <ul class="navItem">
-          <li><a href="">Home</a></li>
-          <li><a href="">ToDo</a></li>
-          <li><a href="">SignUp</a></li>
+        <ul class="navItems">
+          <li class="navItem"><a href="#home">Home</a></li>
+          <li class="navItem"><a href="">ToDo</a></li>
+          <li class="navItem"><a href="">SignUp</a></li>
         </ul>
       </nav>
       <div class="headline">
-        <h2 id="main-heading">Manage your Task</h2>
+        <h2 id="main-heading">
+          Manage your Task <span style="display: none">Hello</span>
+        </h2>
         <button class="btn btn-headline">Learn More</button>
       </div>
     </header>
