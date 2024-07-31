@@ -63,6 +63,10 @@
         margin-top: 1rem;
         background-color: #a20a0a;
       }
+      .bg-dark {
+        background-color: #01100b;
+        color: antiquewhite;
+      }
       .todo-section {
         margin-top: 2rem;
         text-align: center;
@@ -70,6 +74,18 @@
       .form-todo {
         min-height: 5vh;
         display: flex;
+      }
+      .todo-list {
+        text-align: left;
+        font-size: 1.2rem;
+        list-style-type: none;
+      }
+      .todo-list li {
+        padding: 0.7rem;
+        background-color: #444;
+        color: blueviolet;
+        text-transform: capitalize;
+        margin-top: 0.2rem;
       }
       .form-todo input {
         min-height: 100%;
@@ -116,7 +132,13 @@
     <!-- <script src="./97.js" defer></script> -->
     <!-- <script src="./98.js" defer></script>  -->
     <!-- <script src="./99.js" defer></script> -->
-    <script src="./100.js" defer></script>
+    <!-- <script src="./100.js" defer></script> -->
+    <!-- <script src="./104.js" defer></script> -->
+    <!-- <script src="./105.js" defer></script> -->
+    <!-- <script src="./106.js" defer></script>
+      -->
+    <!-- <script src="./107.js" defer></script> -->
+    <script src="./108.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -141,6 +163,14 @@
         <input type="text" name="" id="" placeholder="AddTodo" />
         <input type="submit" value="Add Todo" class="btn" />
       </form>
+      <ul class="todo-list">
+        <!-- <li>Todo-1</li> -->
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+      </ul>
     </section>
     <section class="section-signup container">
       <h2 class="no-sign">SignUp</h2>
