@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Event</title>
+  </head>
+  <body>
+    <button>Change BackGroundColor</button>
+    <script>
+      //keypressevent and mouseoverevent
+      const body = document.body;
+      body.addEventListener("keypress", (e) => {
+        console.log(e.key); //to get the key
+      });
+      const button = document.querySelector("button");
+      button.addEventListener("mouseover", (e) => {
+        console.log(e.clientX, e.clientY);
+      });
+      button.addEventListener("mouseleave", (e) => {
+        console.log(e.clientX, e.clientY);
+      });
+    </script>
+  </body>
+</html>

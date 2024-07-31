@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Colors</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      main {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        padding: 1rem 2rem;
+        background-color: #333;
+        color: #efefef;
+        border: 1rem;
+      }
+      button {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        border: none;
+        outline: none;
+        transition: all 0.4s;
+      }
+      button:hover {
+        background: rgb(214, 214, 214);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>
+          Current Color:<span class="currentColor">rgb(255,255,255)</span>
+        </h1>
+        <button>Change BackGroundColor</button>
+      </div>
+    </main>
+    <script>
+      const mainButton = document.querySelector("button");
+      const body = document.body;
+      const currentColor = document.querySelector(".currentColor");
+      function randomColorGenerator() {
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        const randomColor = `rgb(${red},${green},${blue})`;
+        return randomColor;
+      }
+      mainButton.addEventListener("click", () => {
+        const randomColor = randomColorGenerator();
+        // console.log(randomColor);
+        body.style.backgroundColor = randomColor;
+        currentColor.textContent = randomColor;
+      });
+      //keypress event and mouse over event
+    </script>
+  </body>
+</html>

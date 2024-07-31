@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClickEvent</title>
+    <!-- <script src="./112.js" defer></script> -->
   </head>
   <body>
     <div class="my-buttons">
@@ -12,17 +13,33 @@
       <button id="three">MyButton3</button>
     </div>
     <script>
-        //use of this in event
+      console.log("script start!!!!");
+      //use of this in event
       const allButton = document.querySelectorAll("button");
       console.log(allButton);
       //   firstButton.addEventListener("click", () => {
       //     console.log("you clicked me");
       //   });
-      for (let button of allButton) {
-        button.addEventListener("click", function () {
-          console.log(this.textContent);
+      //   for (let button of allButton) {
+      //     button.addEventListener("click", function () {
+      //       console.log(this.textContent);
+      //     });
+      //   }
+      allButton.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          let num = 0;
+          for (let i = 0; i <= 10000000; i++) {
+            num += i;
+          }
+          console.log(e.target.textContent, num);
         });
+      });
+      let outerValue = 0;
+      for (let i = 0; i <= 100000000; i++) {
+        outerValue += i;
       }
+      console.log("value of outer var is ", outerValue);
+      console.log("script End!!!!");
     </script>
   </body>
 </html>

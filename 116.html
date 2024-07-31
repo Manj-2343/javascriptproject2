@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Event Bubbling/event propagation | eventCapturing | event Delegation
+    </title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .box {
+        min-height: 100px;
+        min-height: 100px;
+        padding: 5rem;
+        color: beige;
+        font-weight: bold;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      .grandParent {
+        background: #b1d4e0;
+        color: black;
+      }
+      .parent {
+        background: #145da0;
+        color: black;
+      }
+      .child {
+        background: #0c2d48;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="grandParent box">
+        GrandParent
+        <div class="parent box">
+          Parent
+          <div class="child box">Child</div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const grandParent = document.querySelector(".grandParent");
+      //   const parent = document.querySelector(".parent");
+      //   const child = document.querySelector(".child");
+      //   const body = document.body;
+      // event bubbling or event propagation
+      //   child.addEventListener("click", () => {
+      //     console.log("you clicked on the child");
+      //   });
+      //   parent.addEventListener("click", () => {
+      //     console.log("you clicked on the parent");
+      //   });
+      //   grandParent.addEventListener("click", () => {
+      //     console.log("you clicked on the grandParent");
+      //   });
+      //   body.addEventListener("click", () => {
+      //     console.log("you clicked on the body");
+      //   });
+      //event Capturing
+      //   child.addEventListener(
+      //     "click",
+      //     () => {
+      //       console.log("Captured the !!!!! child");
+      //     },
+      //     true
+      //   );
+      //   parent.addEventListener(
+      //     "click",
+      //     () => {
+      //       console.log("Captured the !!!!! parent");
+      //     },
+      //     true
+      //   );
+      //   grandParent.addEventListener(
+      //     "click",
+      //     () => {
+      //       console.log("Captured the !!!!! grandParent");
+      //     },
+      //     true
+      //   );
+      //   body.addEventListener(
+      //     "click",
+      //     () => {
+      //       console.log("Captured the !!!!! body");
+      //     },
+      //     true
+      //   );
+
+      /*Event delegation*/
+      grandParent.addEventListener("click", (e) => {
+        console.log(e.target);
+      });
+    </script>
+  </body>
+</html>
