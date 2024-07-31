@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickEvent</title>
+  </head>
+  <body>
+    <div class="my-buttons">
+      <button id="one">MyButton1</button>
+      <button id="two">MyButton2</button>
+      <button id="three">MyButton3</button>
+    </div>
+    <script>
+        //use of this in event
+      const allButton = document.querySelectorAll("button");
+      console.log(allButton);
+      //   firstButton.addEventListener("click", () => {
+      //     console.log("you clicked me");
+      //   });
+      for (let button of allButton) {
+        button.addEventListener("click", function () {
+          console.log(this.textContent);
+        });
+      }
+    </script>
+  </body>
+</html>
